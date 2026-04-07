@@ -223,8 +223,8 @@
       const medal   = i === 0 ? '\u{1F947}' : i === 1 ? '\u{1F948}' : i === 2 ? '\u{1F949}' : (i + 1);
       const div = document.createElement('div');
       div.className = 'row';
-      div.style.cssText = 'animation-delay:' + (i * 40) + 'ms;cursor:pointer;';
-      div.onclick = () => showProfile(p.name);
+const size = i === 0 ? '1.1rem' : i === 1 ? '1.05rem' : i === 2 ? '1.02rem' : '0.95rem';
+div.style.cssText = 'animation-delay:' + (i * 40) + 'ms;cursor:pointer;font-size:' + size + ';';      div.onclick = () => showProfile(p.name);
       div.innerHTML =
         '<span class="' + rankCls + '">' + medal + '</span>' +
         '<span class="' + nameCls + '">' + p.name + '</span>' +
